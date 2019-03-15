@@ -1,0 +1,9 @@
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build -t huy/docker-react -f Dockerfile.dev .
+
+script:
+  - docker run huy/docker-react npm run test -- --coverage
