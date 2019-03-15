@@ -1,6 +1,6 @@
 # Build Phase
 
-FROM node:alpine as builder
+FROM node:8.12.0 as builder
 WORKDIR '/app'
 COPY package.json .
 RUN npm install
